@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../Card/Card";
-import "./Board.css";
+import "./board.css";
 
 const Board = ({
   level,
