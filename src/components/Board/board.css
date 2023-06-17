@@ -1,0 +1,14 @@
+.board {
+  display: grid;
+  grid-gap: 15px;
+  margin: 50px auto;
+}
+.board-casual {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.board-medium {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
