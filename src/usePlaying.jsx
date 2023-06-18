@@ -49,7 +49,8 @@ function usePlaying(cards) {
       setIsWinner("loser");
       resetGame();
     }
-
+    
+    console.log(cardList.length)
     if (time == 90 && cardList.length == 36) {
       setIsWinner("loser");
       resetGame();

@@ -3,6 +3,7 @@ import usePlaying from "./usePlaying";
 import Board from "./components/Board/Board";
 
 import { cardsCasual, cardsHard } from "./constants/Card";
+import Modal from "./components/Modal/modal";
 const randomComparison = () => Math.random() - 0.5;
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
         ></i>
       )}
       <h1 className="title">Card memory Game</h1>
+
       {!difficulty && (
         <div className="menu">
           <h2>select the difficulty</h2>
@@ -58,21 +60,7 @@ function App() {
               Hard
             </button>
           </div>
-
-          {iswinner &&
-            (iswinner == "winner" ? (
-              <div className="final-message">
-                <h2 className="final-message__title">You win !!</h2>
-                <p>
-                  Congratulations, you have successfully completed the game.
-                </p>
-              </div>
-            ) : (
-              <div className="final-message">
-                <h2 className="final-message__title">you lost</h2>
-                <p>You'll do better next time, good luck.</p>
-              </div>
-            ))}
+          {iswinner && <Modal iswinner={iswinner} />}
         </div>
       )}
 
